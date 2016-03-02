@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 gem 'minitest', '>= 5.0.0'
+require 'minitest/pride'
 require 'minitest/autorun'
 require_relative 'hamming'
 
@@ -12,7 +13,6 @@ class HammingTest < Minitest::Test
   end
 
   def test_long_identical_strands
-    skip
     assert_equal 0, Hamming.compute('GGACTGA', 'GGACTGA')
   end
 
