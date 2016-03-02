@@ -1,6 +1,12 @@
 class Hamming
 
+  VERSION = 1
+
   def self.compute(dna, dna2)
+    if dna.length != dna2.length
+      raise ArgumentError
+    end
+
     i        = 0
     distance = 0
     length = dna.length
