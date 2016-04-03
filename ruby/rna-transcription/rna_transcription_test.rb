@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 gem 'minitest', '>= 5.0.0'
+require 'minitest/pride'
 require 'minitest/autorun'
 require_relative 'rna_transcription'
 
@@ -12,7 +13,6 @@ class ComplementTest < Minitest::Test
   end
 
   def test_rna_complement_of_guanine_is_cytosine
-    skip
     assert_equal 'C', Complement.of_dna('G')
   end
 
