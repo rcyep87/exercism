@@ -3,15 +3,20 @@ class Complement
   VERSION = 3
 
   def self.of_dna(dna)
-    if dna == "C"
-      dna.gsub("C", "G")
-    elsif dna == "G"
-      dna.gsub("G", "C")
-    elsif dna == "T"
-      dna.gsub("T", "A")
-    elsif dna == "A"
-      dna.gsub("A", "U")
+    output_arr = []
+    dna_arr = dna.split(//)
+    dna_arr.each do |letter|
+      if letter == "C"
+        output_arr << letter.gsub("C", "G")
+      elsif letter == "G"
+        output_arr << letter.gsub("G", "C")
+      elsif letter == "T"
+        output_arr << letter.gsub("T", "A")
+      elsif letter == "A"
+        output_arr << letter.gsub("A", "U")
+      end
     end
+    output_arr.join("")
   end
 
 end
