@@ -9,6 +9,8 @@ class Complement
       dna.gsub("G", "C")
     elsif dna == "T"
       dna.gsub("T", "A")
+    elsif dna == "A"
+      dna.gsub("A", "U")
     end
   end
 
